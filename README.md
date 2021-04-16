@@ -5,7 +5,11 @@
 </div>
 
 ## 👉 FEATURES
-
+- Apollo Server
+- MongoDB 
+- CRUD
+- GraphQL Server
+- Graphql API
 
 ##  INSTALLATION
 
