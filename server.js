@@ -1,2 +1,30 @@
 const express = require("express");
-const { ApolloServer, gql } = require("");
+const { ApolloServer, gql } = require("apollo-server-express");
+
+const typeDefs = gql`
+  type Query {
+    hello: String
+  }
+`;
+
+const resolvers = {
+  Query: {
+    hello: () => {
+      return "hello world";
+    },
+  },
+};
+
+async function startSever() {
+  const app = express();
+  const apolloServer = new ApolloServer({
+    typeDefs,
+    resolvers,
+  });
+
+  await apolloServer.start();
+  apolloServer.applyMiddleware({ app: app });
+  app.listen(4000);
+}
+
+startSever();
