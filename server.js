@@ -1,19 +1,9 @@
 const express = require("express");
 const { ApolloServer, gql } = require("apollo-server-express");
-
-const typeDefs = gql`
-  type Query {
-    hello: String
-  }
-`;
-
-const resolvers = {
-  Query: {
-    hello: () => {
-      return "hello world";
-    },
-  },
-};
+const typeDefs = require("./typeDefs");
+const resolvers = require("./resolvers");
+const Post = require("./models/Post.model");
+const db = require("./db/conn");
 
 async function startSever() {
   const app = express();
@@ -23,8 +13,8 @@ async function startSever() {
   });
 
   await apolloServer.start();
-  apolloServer.applyMiddleware({ app: app });
-  app.listen(4000, () => console.log("Listening on 4000"));
+  apolloServer.applyMiddleware({ app: app, path: "/graphql" });
+  app.listen(3000, () => console.log("Listening on 3000"));
 }
 
 startSever();
