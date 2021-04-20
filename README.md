@@ -5,7 +5,11 @@
 </div>
 
 ## 👉 FEATURES
-
+- Apollo Server
+- MongoDB 
+- CRUD
+- GraphQL Server
+- Graphql API
 
 ##  INSTALLATION
 
@@ -31,4 +35,4 @@ If you liked the repo then kindly support it by giving it a star ⭐!
 If you find any bug in the code or have any improvements in mind then feel free to generate a pull request.
 
 ## LICENSE
-- MIT
+- MIT (2021)
