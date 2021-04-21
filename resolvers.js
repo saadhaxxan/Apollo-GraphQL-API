@@ -23,6 +23,12 @@ const resolvers = {
             await Post.findByIdAndDelete(id);
             return "Post Deleted";
         },
+        updatePost: async(parent, args, context, info) => {
+            const { id } = args;
+            const { title, description } = args.post;
+            await Post.findByIdAndUpdate(id, { title, description }, { new: true });
+            return "Post Updated";
+        },
     },
 };
 
