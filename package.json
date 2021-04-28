@@ -1,14 +1,18 @@
 {
-  "name": "Apollo-GraphQL-API",
+  "name": "apollo-graphql-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Apollo GraphQL API",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
   },
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/saadhaxxan/Apollo-GraphQL-API"
+  },
   "keywords": [],
-  "author": "",
+  "author": "Saad Hassan (https://saad-hassan.com)",
   "license": "ISC",
   "dependencies": {
     "apollo-server-express": "^2.23.0",
